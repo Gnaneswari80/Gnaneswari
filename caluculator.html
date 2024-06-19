@@ -1,0 +1,77 @@
+<html>
+<style>
+div
+{
+
+}
+
+input[type=button]
+{
+padding:16px;
+background-color:blue;
+
+}
+input[type=text]
+{
+width:10%;
+height:7%;
+}
+.cl
+{
+padding:1%;
+}
+input:active
+{
+border:2px;
+background-color:green;
+}
+h2
+{
+color:red;
+text-align:center;
+}
+
+</style>
+<body bgcolor=powderblue>
+<h2>Simple Calculator</h2>
+<input type="text" id="result">
+<input class="cl"type="button" value="C"  onclick="clr()"></button>
+<br>
+
+<input type="button" value="1" onclick="fun('1')"></button>
+<input type="button" value="2" onclick="fun('2')"></button>
+<input type="button" value="3" onclick="fun('3')"></button>
+<input type="button" value="=" onclick="res()"></button><br>
+<input type="button" value="4" onclick="fun('4')"></button>
+<input type="button" value="5" onclick="fun('5')"></button>
+<input type="button" value="6" onclick="fun('6')"></button>
+<input type="button" value="+" onclick="fun('+')"></button><br>
+<input type="button" value="7" onclick="fun('7')"></button>
+<input type="button" value="8" onclick="fun('8')"></button>
+<input type="button" value="9" onclick="fun('9')"></button>
+<input type="button" value="-" onclick="fun('-')"></button><br>
+<input type="button" value="0" onclick="fun('0')"></button>
+<input type="button" value="%" onclick="fun('%')"></button>
+<input type="button" value="/" onclick="fun('/')"></button>
+<input type="button" value="*" onclick="fun('*')"></button><br>
+
+</table>
+</body>
+<script>
+function fun(value)
+{
+document.getElementById("result").value+=value;
+}
+function clr()
+{
+document.getElementById("result").value="";
+}
+function res()
+{
+let a=document.getElementById("result").value;
+let b=eval(a);
+document.getElementById("result").value=b;
+}
+
+</script>
+</html>
