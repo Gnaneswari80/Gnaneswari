@@ -1,0 +1,191 @@
+<html>
+<head>
+<style>
+table,td
+{
+border-collapse:collapse;
+padding:20px;
+background-color:tomato;
+}
+input[type="button"]
+{
+width:5%;
+height:5%;
+background-color:green;
+color:white;
+border-radius:20px;
+}
+input[type="button"]:hover
+{
+background-color:blue;
+}
+input[type="button"]:active
+{
+width:6%;
+height:6%;
+}
+input[type="button"]:visited
+{
+ background-color:yellow;
+}
+
+h1
+{
+background-color:pink;
+padding:10px;
+text-align:center;
+}
+</style>
+</head>
+<body bgcolor="powderblue">
+<h1>We Will Find Your Number</h1>
+<h4>Now select Any number from 1 to 15</h4>
+<ul>
+<li>We display 4 Tables with numbers</li>
+<li>You should click on <big>Yes</big> when the selected number is present with in corresponding table otherwise click <big>No</big></li>
+<li>Finally click on <big>check</big></li>
+</ul>
+<input type="hidden" id="result">
+<table border="1">
+<tr>
+    <td>13</td>
+      <td>12</td>
+    <td>15</td>
+    <td>11</td>
+    <td>7</td>
+    <td>5</td>
+    <td>1</td>
+    <td>6</td>
+</tr>
+</table>
+<input type="button" value="no" onclick="fun('0')">
+<input type="button" value="yes" onclick="fun('1')">
+<br><br>
+
+<table border="1">
+<tr>
+    <td>15</td>
+      <td>12</td>
+    <td>14</td>
+    <td>11</td>
+    <td>9</td>
+    <td>5</td>
+    <td>8</td>
+    <td>2</td>
+</tr>
+</table>
+<input type="button" value="no" onclick="fun('0')">
+<input type="button" value="yes" onclick="fun('1')">
+
+<br><br>
+<table border="1">
+<tr>
+    <td>9</td>
+      <td>15</td>
+    <td>4</td>
+    <td>14</td>
+    <td>13</td>
+    <td>12</td>
+    <td>10</td>
+    <td>6</td>
+</tr>
+</table>
+<input type="button" value="no" onclick="fun('0')">
+<input type="button" value="yes" onclick="fun('1')">
+<br><br>
+<table border="1">
+<tr>
+    <td>8</td>
+      <td>15</td>
+    <td>3</td>
+    <td>14</td>
+    <td>13</td>
+    <td>11</td>
+    <td>10</td>
+    <td>7</td>
+</tr>
+</table>
+<input type="button" value="no" onclick="fun('0')">
+<input type="button" value="yes" onclick="fun('1')">
+<br>
+<br>
+<input type="button" value="CHECK" onclick="check()">
+<input type="button" value="Restart" onclick="clr()">
+
+<script>
+function fun(value)
+{
+ document.getElementById("result").value+=value;
+}
+function check()
+{
+  var a=document.getElementById("result").value;
+var va;
+if(a==1000)
+{
+va=1;
+}
+if(a==100)
+{
+va=2;
+}
+if(a==1)
+{
+va=3;
+}
+if(a==10)
+{
+va=4;
+}
+if(a==1100)
+{
+va=5;
+}
+if(a==1010)
+{
+va=6;
+}
+if(a==1001)
+{
+va=7;
+}
+if(a==101)
+{
+va=8;
+}
+if(a==110)
+{
+va=9;
+}
+if(a==11)
+{
+va=10;
+}
+if(a==1101)
+{
+va=11;
+}
+if(a==1110)
+{
+va=12;
+}
+if(a==1011)
+{
+va=13;
+}
+if(a==111)
+{
+va=14;
+}
+if(a==1111)
+{
+va=15;
+}
+alert("You guessed number is"+va);
+document.getElementById("result").value="";
+
+}
+function clr(){document.getElementById("result").value="";}
+</script>
+</body>
+</html>
